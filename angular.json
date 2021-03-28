@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "assuranceboulhimez"
+    }
+  },
+  "defaultProject": "assuranceboulhimez",
+  "cli": {
+    "analytics": false
+  }
 }
