@@ -2,7 +2,7 @@
 <p-card>
     <ng-template pTemplate="header">
         <div style="text-align: center;font-size: x-large;color: deepskyblue;font-style: normal;">
-       <strong> Mise à jour des clients </strong>
+       <strong>Mise à jour des clients</strong> 
     </div>
     </ng-template>
     <form (ngSubmit)="onSubmit(f2)" #f2="ngForm" align="center">
@@ -12,7 +12,7 @@
                 <label for="float-input">Code</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" name="codeClient" #codeClient="ngModel"
+                <input type="text" class="form-control" name="code" #code="ngModel"
                 ngModel aria-label="Username" aria-describedby="basic-addon1">
  
             </div>
@@ -20,7 +20,8 @@
                 <label for="float-input">Nom</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="nom" #nom="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
           </div>
@@ -29,14 +30,16 @@
                 <label for="float-input">Prénom</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="prenom" #prenom="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
 
             </div>
             <div class="col">
                 <label for="float-input">Date Naissance</label>
             </div>
             <div class="col">
-                <input type="Date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="Date" class="form-control" name="dateNaissance" #dateNaissance="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
 
         </div>
           </div>
@@ -45,7 +48,8 @@
                 <label for="float-input">Adresse</label>
             </div>
             <div class="col-9">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="adresse" #adresse="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
 
             </div>
           </div>
@@ -54,19 +58,20 @@
                 <label for="float-input">Ville</label>
             </div>
             <div class="col-3">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="ville" #ville="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
 
             </div>
             <div class="col-3">
                 <label for="float-input">Sexe</label>
             </div>
-            <div class="col-2">
+            <div class="col-2" id="sexe">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M">
+                <input class="form-check-input" name="sexe"  type="radio" value="M">
                 <label class="form-check-label" for="inlineRadio1">M</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F">
+                <input class="form-check-input" name="sexe" type="radio" value="F">
                 <label class="form-check-label" for="inlineRadio2">F</label>
             </div>
          </div>
@@ -78,12 +83,8 @@
             </div>
             <div class="col">
                 <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect01">
-                      <option selected>Choose...</option>
-                      <option value="C">C</option>
-                      <option value="M">M</option>
-                      <option value="D">D</option>
-                      <option value="V">V</option>
+                    <select class="custom-select" id="situationFamiliale">
+                      <option *ngFor="let situation of situationsFamiliales" [value]="situation">{{situation}}</option>
                     </select>
                   </div>
             </div>
@@ -91,7 +92,8 @@
                 <label for="float-input">Nombre d'enfant</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="nombreEnfant" #nombreEnfant="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
          </div>
           </div>
 
@@ -101,13 +103,15 @@
                 <label for="float-input">Télephone</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="numeroTelephone" #numeroTelephone="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="col">
                 <label for="float-input">N° Permis</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="numeroPermis" #numeroPermis="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
         </div>
           </div>
           <div class="row" style="margin-top:8px;">
@@ -115,18 +119,20 @@
                 <label for="float-input">Date Permis</label>
             </div>
             <div class="col">
-                <input type="Date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="Date" class="form-control" name="datePermis" #datePermis="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="col">
                 <label for="float-input">Lieu de Permis</label>
             </div>
             <div class="col">
-                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="lieuPermis" #lieuPermis="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
         </div>
           </div>
           <div class="row" style="margin-top:8px;">
             <div class="col">
-          <button type="button" class="btn btn-primary btn-lg" type="submit">Valider</button>
+          <button type="button" style="width: 200px;" class="btn btn-primary btn-lg" type="submit">Valider</button>
 </div>
 </div>
           </div>
