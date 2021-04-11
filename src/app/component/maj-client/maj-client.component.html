@@ -1,6 +1,138 @@
+<div style="margin-top: 20px; margin-left: 10px;margin-right: 10px;">
 <p-card>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText> 
-        <label for="float-input">Username</label>
-    </span>
+    <ng-template pTemplate="header">
+        <div style="text-align: center;font-size: x-large;color: deepskyblue;font-style: normal;">
+        Mise à jour des clients
+    </div>
+    </ng-template>
+    <form (ngSubmit)="onSubmit(f2)" #f2="ngForm" align="center">
+    <div class="container" align="center">
+        <div class="row">
+            <div class="col">
+                <label for="float-input">Code</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="codeClient" #codeClient="ngModel"
+                ngModel aria-label="Username" aria-describedby="basic-addon1">
+ 
+            </div>
+            <div class="col">
+                <label for="float-input">Nom</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <div class="col">
+                <label for="float-input">Prénom</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+
+            </div>
+            <div class="col">
+                <label for="float-input">Date Naissance</label>
+            </div>
+            <div class="col">
+                <input type="Date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <div class="col-3">
+                <label for="float-input">Adresse</label>
+            </div>
+            <div class="col-9">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+
+            </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <div class="col-3">
+                <label for="float-input">Ville</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+
+            </div>
+            <div class="col-3">
+                <label for="float-input">Sexe</label>
+            </div>
+            <div class="col-2">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M">
+                <label class="form-check-label" for="inlineRadio1">M</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F">
+                <label class="form-check-label" for="inlineRadio2">F</label>
+            </div>
+         </div>
+          </div>
+
+          <div class="row" style="margin-top:8px;">
+            <div class="col">
+                <label for="float-input">Situation Familiale</label>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="C">C</option>
+                      <option value="M">M</option>
+                      <option value="D">D</option>
+                      <option value="V">V</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col">
+                <label for="float-input">Nombre d'enfant</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+         </div>
+          </div>
+
+
+          <div class="row" style="margin-top:8px;">
+            <div class="col">
+                <label for="float-input">Télephone</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="col">
+                <label for="float-input">N° Permis</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <div class="col">
+                <label for="float-input">Date Permis</label>
+            </div>
+            <div class="col">
+                <input type="Date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="col">
+                <label for="float-input">Lieu de Permis</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <div class="col">
+          <button type="button" class="btn btn-primary btn-lg" type="submit">Valider</button>
+</div>
+</div>
+          </div>
+        </form>
+    <ng-template pTemplate="footer">
+        
+    </ng-template>
 </p-card>
+</div>

@@ -3,6 +3,8 @@ import { Routes,RouterModule } from '@angular/router';
 import {MajClientComponent} from './maj-client.component'
 import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
+import {FormsModule} from '@angular/forms';
+
 const routes: Routes = [{
 
     path: '',
@@ -20,7 +22,8 @@ const routes: Routes = [{
     imports: [
         RouterModule.forChild(routes),
         CardModule,
-        InputTextModule
+        InputTextModule,
+        FormsModule
     ],
     exports: [MajClientComponent],
     providers: [],
