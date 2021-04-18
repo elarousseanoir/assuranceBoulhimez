@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { CyclomoteurComponent } from "./cyclomoteur.component";
 import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
+import {AllCyclomoteurComponent} from "./all-cyclomoteur.component";
+
 
 const routes: Routes = [{
 
@@ -12,13 +13,13 @@ const routes: Routes = [{
           title: '',
           urls: [{title: '', url: ''}, {title: ''}]
       },
-    component: CyclomoteurComponent
+    component: AllCyclomoteurComponent
   }];
 
 
   @NgModule({
     declarations: [
-      CyclomoteurComponent
+        AllCyclomoteurComponent,
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -26,8 +27,8 @@ const routes: Routes = [{
         InputTextModule,
         FormsModule
     ],
-    exports: [CyclomoteurComponent],
+    exports: [AllCyclomoteurComponent],
     providers: [],
-    bootstrap: [CyclomoteurComponent]
+    bootstrap: [AllCyclomoteurComponent]
   })
-  export class CyclomoteurModule { }
+  export class AllCyclomoteurModule { }

@@ -13,7 +13,13 @@ export const routes: Routes = [{
     // Cyclomoteur
     {
       path: 'cyclomoteur',
-      loadChildren: () => import('./assurance-auto/cyclomoteur/cyclomoteur.module').then(m => m.CyclomoteurModule),
+      loadChildren: () => import('./component/assurance-auto/cyclomoteur/cyclomoteur.module').then(m => m.CyclomoteurModule),
+    },
+    //All cyclomoteur
+    {
+      path: 'allCyclomoteur',
+      loadChildren: () => import('./component/assurance-auto/cyclomoteur/all-cyclomoteur/all-cyclomoteur.module')
+      .then(m => m.AllCyclomoteurModule),
     }
 ]
 },
