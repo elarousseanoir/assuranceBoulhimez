@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
-import {MajClientComponent} from './maj-client.component'
 import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
+import { CyclomoteurComponent} from './cyclomoteur.component';
+import {CalendarModule} from 'primeng/calendar';
+import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {CheckboxModule} from 'primeng/checkbox';
 
 const routes: Routes = [{
 
@@ -12,22 +15,28 @@ const routes: Routes = [{
           title: '',
           urls: [{title: '', url: ''}, {title: ''}]
       },
-    component: MajClientComponent
+    component: CyclomoteurComponent
   }];
 
 @NgModule({
     declarations: [
-      MajClientComponent
+        CyclomoteurComponent,
+       
     ],
     imports: [
         RouterModule.forChild(routes),
         CardModule,
         InputTextModule,
-        FormsModule
+        FormsModule,
+        CalendarModule,
+        CheckboxModule,
+        CascadeSelectModule,
+        
     ],
-    exports: [MajClientComponent],
+    exports: [CyclomoteurComponent],
     providers: [],
-    bootstrap: [MajClientComponent]
+    bootstrap: [CyclomoteurComponent]
   })
-  export class MajClientModule { }
+
   
+export class CylomoteurModule { }
