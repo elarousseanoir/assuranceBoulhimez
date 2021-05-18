@@ -16,6 +16,12 @@ export const routes: Routes = [{
       path: 'cyclomoteur',
       loadChildren: () => import('./component/assurance-auto/cyclomoteur/cyclomoteur.module').then(m => m.CylomoteurModule),
     },
+
+    //allCyclomoteur
+    {
+      path: 'cyclomoteur',
+      loadChildren: () => import('./component/assurance-auto/cyclomoteur/all-cyclomoteur/all-cyclomoteur.module').then(m => m.AllCylomoteurModule),
+    },
 ]
 },
 ];

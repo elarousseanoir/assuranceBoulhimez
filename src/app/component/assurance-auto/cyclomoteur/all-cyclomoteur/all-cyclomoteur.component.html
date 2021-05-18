@@ -1,0 +1,122 @@
+<div style="margin-top: 20px; margin-left: 10px;margin-right: 10px;">
+    <p-card>
+        <ng-template pTemplate="header">
+            <div style="text-align: center;font-size: x-large;color: deepskyblue;font-style: normal;">
+           <strong> Liste cyclomoteurs </strong>
+        </div>
+        </ng-template>
+        <div class="container-fluid pt-3">
+            <form >
+                <div class="card mt-3"  id="collapse1">
+                  <div class="card-body p-3">
+                    <div class="row">
+                   
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="reference"  class="hidden">Attestation</label>
+                          <input type="text" class="form-control form-control-sm" id="reference" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="reference" class="hidden">Nom </label>
+                          <input type="text" class="form-control form-control-sm" placeholder="" >
+                        </div>
+                      </div>
+                
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="numero"  class="hidden">Prénom</label>
+                          <input type="text" class="form-control form-control-sm" id="numero" placeholder="" >
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="etat"  class="hidden">Garant</label>
+                          <input type="text" class="form-control form-control-sm" id="etat" placeholder="" >
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="typ_ot"  class="hidden">Marque</label>
+                          <input type="text" class="form-control form-control-sm" id="typ_ot" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="edsp" class="hidden">Immatriculation</label>
+                          <input type="text" class="form-control form-control-sm" id="edsp" placeholder="" >
+                        </div>
+                      </div>
+                   
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="b" class="hidden">Defence et recours</label>
+                          <select class="form-control form-control-sm" id="b" >
+                            <option value="oui" selected>Oui</option>
+                            <option value="non">Non</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="b" class="hidden">Annuler</label>
+                          <select class="form-control form-control-sm" id="b" >
+                            <option value="oui" selected>Oui</option>
+                            <option value="non">Non</option>
+                          </select>
+                        </div>
+                      </div>
+                    
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="edsp" class="hidden">Période assurée</label>
+                          <input type="text" class="form-control form-control-sm" id="edsp" placeholder="" >
+                        </div>
+                      </div>
+                     
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="date_debut" class="hidden">Fait le</label>
+                          <div class="input-group-prepend">
+                            <p-calendar  class="form-control-sm" [(ngModel)]="value" dateFormat="dd/mm/yy"></p-calendar>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="date_debut" class="hidden">Date d'effet du</label>
+                          <div class="input-group-prepend">
+                            <p-calendar  class="form-control-sm" dateFormat="dd/mm/yy"></p-calendar>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="date_debut" class="hidden">Au</label>
+                          <div class="input-group-prepend">
+                            <p-calendar  class="form-control-sm"  dateFormat="dd/mm/yy"></p-calendar>
+                          </div>
+                        </div>
+                      </div>
+                                        
+                      
+                      <div class="col-md-12 text-right mt-2">
+                        <button type="submit" class="btn btn-primary btn-sm">FILTRER</button>
+                        &nbsp;<button type="button" class="btn btn-dark btn-sm" >RÉINITIALISER</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+              </form>
+        </div>
+    </p-card>
+    </div>
+
+    

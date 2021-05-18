@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-cyclomoteur',
@@ -6,18 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cyclomoteur.component.css']
 })
 export class CyclomoteurComponent implements OnInit {
-  value: Date;
-  products: any[];
-
-    customers: any[];
-    resizableColumns:boolean=true;
-    scrollable:boolean=true;
-    valueC:any[];
-
   constructor() { }
 
   ngOnInit(): void {
   }
- 
 
+  onSubmit(form: NgForm) {
+  }
 }

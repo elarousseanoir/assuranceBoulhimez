@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CyclomoteurComponent } from './cyclomoteur.component';
+import { AllCyclomoteurComponent } from './all-cyclomoteur.component';
 
-describe('CyclomoteurComponent', () => {
-  let component: CyclomoteurComponent;
-  let fixture: ComponentFixture<CyclomoteurComponent>;
+describe('AllCyclomoteurComponent', () => {
+  let component: AllCyclomoteurComponent;
+  let fixture: ComponentFixture<AllCyclomoteurComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CyclomoteurComponent ]
+      declarations: [ AllCyclomoteurComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CyclomoteurComponent);
+    fixture = TestBed.createComponent(AllCyclomoteurComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
